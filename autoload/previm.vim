@@ -134,7 +134,7 @@ function! s:function_template() abort
   let current_file = expand('%:p')
   return join([
       \ 'function isShowHeader() {',
-      \ printf('return %s;', get(g:, 'previm_show_header', 1)),
+      \ printf('return %s;', get(g:, 'previm_show_header', 1) ==# 1),
       \ '}',
       \ '',
       \ 'function getFileName() {',
